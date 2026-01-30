@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text Utility Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>Text Utility</h1>
+
+    <div class="dark-toggle">
+      <span>Dark</span>
+      <label class="switch">
+        <input type="checkbox" id="darkToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <textarea id="textInput" placeholder="Paste your text here..."></textarea>
+
+  <div id="info" class="info"></div>
+  
+  <!-- QUICK ACTIONS -->
+  <div class="grid">
+    <button id="dedupBtn">Dedup</button>
+    <button id="sortBtn">Sort</button>
+    <button id="reverseBtn">Reverse</button>
+    <button id="upperBtn">UPPER</button>
+    <button id="lowerBtn">lower</button>
+    <button id="jsonBtn">JSON</button>
+    <button id="b64EncBtn">B64 Enc</button>
+    <button id="b64DecBtn">B64 Dec</button>
+    <button id="urlEncBtn">URL Enc</button>
+    <button id="urlDecBtn">URL Dec</button>
+	<button id="undoBtn">Undo</button>
+  </div>
+
+  <!-- REMOVE CHARACTERS -->
+  <div class="section">
+    <div class="section-title">Remove characters</div>
+    <div class="row">
+      <input id="removeChars" placeholder="e.g. 0x" />
+      <button id="removeBtn">Remove</button>
+    </div>
+  </div>
+
+  <!-- FIND & REPLACE -->
+  <div class="section">
+    <div class="section-title">Find & replace (plain text)</div>
+    <input id="findText" placeholder="Find" />
+    <input id="replaceText" placeholder="Replace with" />
+    <button id="normalReplaceBtn" class="full-btn">Find & Replace</button>
+  </div>
+
+  <!-- REGEX -->
+  <div class="section">
+    <div class="section-title">Regex tools</div>
+    <input id="regexFind" placeholder="Regex pattern" />
+    <input id="regexReplace" placeholder="Replace with" />
+
+    <div class="regex-actions">
+      <button id="regexReplaceBtn">Regex Replace</button>
+      <button id="regexRemoveBtn">Regex Remove</button>
+    </div>
+  </div>
+
+  <div class="watermark">
+    Vibe coded by
+    <a href="https://x.com/frdfzi" target="_blank">@frdfzi</a>
+  </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
